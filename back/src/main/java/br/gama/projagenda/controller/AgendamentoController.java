@@ -49,7 +49,7 @@ public class AgendamentoController {
     @PostMapping("/agendamento/nomeAgencia") 
     public  List<Agendamento> procurarAgenciaNome(@RequestBody Agendamento inputAgenda) 
     {
-       List<Agendamento> lista = dao.findbyAgenciaIdAndNome(inputAgenda.getNumSeq(), inputAgenda.getNome());   
+       List<Agendamento> lista = dao.findByAgenciaIdAndNome(inputAgenda.getNumSeq(), inputAgenda.getNome());   
         
       return lista;
     }
