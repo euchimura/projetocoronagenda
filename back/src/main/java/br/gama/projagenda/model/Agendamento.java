@@ -13,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
@@ -33,7 +34,8 @@ public class Agendamento {
     @Column(name="celular_cli", length=20)
     private String celular;
     
-    @Column(name="data_agendamento")
+	@Column(name="data_agendamento")
+	@JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataAgendamento;
     
     @Column(name="hora_agendamento")
